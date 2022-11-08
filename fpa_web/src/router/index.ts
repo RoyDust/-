@@ -1,5 +1,5 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import { RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router'
+import { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -9,6 +9,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/home',
     component: () => import('../views/Home.vue')
+  },
+  {
+    path: '/:pathMatch(.*)',
+    component: () => import('../404-notFound.vue')
   }
 ]
 
